@@ -41,7 +41,7 @@ const styles = StyleSheet.crate({
 
 
 
-import {fillCenter} from 'react-native-layout/layouts';
+import {fillCenter} from 'react-native-layout';
 <Layout style={fillCenter}>
   {/* view children*/}
 </Layout>
@@ -62,14 +62,14 @@ const styles = StyleSheet.crate({
 
 
 
-import {border} from 'react-native-layout/layouts';
+import {border} from 'react-native-layout';
 <Layout style={border(4, 'red', 1)}>
   {/* view children*/}
 </Layout>
 
 
 
-import {border} from 'react-native-layout/layouts';
+import {border} from 'react-native-layout';
 <Layout style={styles.rounded}>
   {/* view children*/}
 </Layout>

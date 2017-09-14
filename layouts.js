@@ -1,65 +1,26 @@
-export const fill = {
-    flex: 1
+import React from 'react';
+import { View, ViewPropTypes } from 'react-native';
+
+const Layout = ({ vertical, fill, children, style }) => {
+    const viewStyle = { flexDirection: vertical ? 'column' : 'row' };
+    if (fill) {
+        viewStyle.flex = 1;
+    }
+
+    return <View style={[viewStyle, style]}>
+        {children}
+    </View>
 };
 
-export const row = {
-    flexDirection: 'row'
+Layout.propsTypes = {
+    ...ViewPropTypes,
+    vertical: React.PropTypes.bool,
+    fill: React.PropTypes.bool
 };
 
-export const col = {
-    flexDirection: 'column'
+Layout.defaultProps = {
+    vertical: false,
+    fill: false
 };
 
-export const fillRow = {
-    flex: 1,
-    flexDirection: 'row'
-};
-
-export const fillCol = {
-    flex: 1,
-    flexDirection: 'column'
-};
-
-export const fillRowVCenter = {
-    flex: 1,
-    flexDirection: 'row',
-    alignItems: 'center',
-};
-
-export const fillRowHCenter = {
-    flex: 1,
-    flexDirection: 'row',
-    justifyContent: 'center',
-};
-
-export const fillRowCenter = {
-    flex: 1,
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
-};
-
-export const fillRowSpaceBetween = {
-    flex: 1,
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-};
-
-export const border = (borderRadius = 5, borderColor = '#ccc', borderWidth = 1) => ({
-    borderRadius,
-    borderColor,
-    borderWidth
-});
-
-export default {
-    fill,
-    row,
-    col,
-    fillRow,
-    fillCol,
-    fillRowCenter,
-    fillRowHCenter,
-    fillRowVCenter,
-    fillRowSpaceBetween
-}
+export default Layout;
