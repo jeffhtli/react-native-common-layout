@@ -1,0 +1,19 @@
+{
+  "name": "react-native-common-layout",
+  "version": "0.1.0",
+  "description": "Shortcuts for react native View",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeffhtli/react-native-common-layout.git"
+  },
+  "author": "jeffhtli",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jeffhtli/react-native-common-layout/issues"
+  },
+  "homepage": "https://github.com/jeffhtli/react-native-common-layout#readme"
+}
