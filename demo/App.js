@@ -1,21 +1,76 @@
 import React from 'react';
-import Layout from './src/Layout';
-import VLayout from './src/VLayout';
-import HLayout from './src/HLayout';
-import CenterLayout from './src/CenterLayout';
-import {fillCol} from './src/styles';
-import { StyleSheet, Text, View } from 'react-native';
+// import Layout from './src/Layout';
+// import VLayout from './src/VLayout';
+// import HLayout from './src/HLayout';
+// import HCenterLayout from './src/HCenterLayout';
+// import VCenterLayout from './src/VCenterLayout';
+// import CenterLayout from './src/CenterLayout';
+// import {fillCol} from './src/styles';
+import { StyleSheet, Text, View,ScrollView } from 'react-native';
+
+import {
+  Layout, 
+  HLayout, 
+  VLayout,
+  HCenterLayout,
+  VCenterLayout,
+  CenterLayout,
+  fillCol
+} from "./src";
 
 export default class App extends React.Component {
   render() {
     return (
-      <VLayout fill style={{paddingTop: 60}}>
-        
-        <VLayout style={{ backgroundColor: 'grey', width: 100, height: 100}}>
-          
+      <ScrollView style={{marginTop: 20}}>
+        <VLayout style={styles.greyContainer}>
+          <GreenBox />
+          <GreenBox />
+          <GreenBox />
         </VLayout>
-        
-      </VLayout>
+
+        <HLayout style={styles.greyContainer}>
+          <GreenBox />
+          <GreenBox />
+          <GreenBox />
+        </HLayout>
+
+        <HCenterLayout style={styles.greyContainer}>
+          <GreenBox />
+          <GreenBox />
+          <GreenBox />
+        </HCenterLayout>
+
+        <HCenterLayout vertical style={styles.greyContainer}>
+          <GreenBox />
+          <GreenBox />
+          <GreenBox />
+        </HCenterLayout>
+
+
+        <VCenterLayout style={styles.greyContainer}>
+          <GreenBox />
+          <GreenBox />
+          <GreenBox />
+        </VCenterLayout>
+
+        <VCenterLayout vertical style={styles.greyContainer}>
+          <GreenBox />
+          <GreenBox />
+          <GreenBox />
+        </VCenterLayout>
+
+        <CenterLayout style={styles.greyContainer}>
+          <GreenBox />
+          <GreenBox />
+          <GreenBox />
+        </CenterLayout>
+
+        <CenterLayout vertical style={styles.greyContainer}>
+          <GreenBox />
+          <GreenBox />
+          <GreenBox />
+        </CenterLayout>
+      </ScrollView>
     );
   }
 }
@@ -30,10 +85,9 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 
-  greyContainer: {
-    backgroundColor: 'grey',
-    padding: 10,
-    height: 200,
-    width: 200
+  greyContainer: { 
+    backgroundColor: 'grey', 
+    marginTop: 10,  
+    height: 80
   }
 });

@@ -1,11 +1,12 @@
-import React from 'react-native';
+import React from 'react';
 import Layout from './Layout';
 
 const HCenterLayout = props =>
-    <Layout {...props} style={props.vertical ? { alignItems: 'center' } : { justifyContent: 'center' }} />
+    <Layout {...props} style={[props.vertical ? { alignItems: 'center' } : { justifyContent: 'center' }, props.style]} />
+    
 
-HCenterLayout.propsTypes = {
-    ...Layout.propsTypes
+HCenterLayout.propTypes = {
+    ...Layout.propTypes
 }
 
 export default HCenterLayout;

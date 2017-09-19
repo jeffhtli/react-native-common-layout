@@ -39,6 +39,13 @@ export const fillRowCenter = {
     alignItems: 'center',
 };
 
+export const fillColCenter = {
+    flex: 1,
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+};
+
 export const fillRowSpaceBetween = {
     flex: 1,
     flexDirection: 'row',
@@ -58,6 +65,7 @@ export default {
     col,
     fillRow,
     fillCol,
+    fillColCenter,
     fillRowCenter,
     fillRowHCenter,
     fillRowVCenter,

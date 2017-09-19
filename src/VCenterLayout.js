@@ -1,11 +1,11 @@
-import React from 'react-native';
+import React from 'react';
 import Layout from './Layout';
 
 const VCenterLayout = props => 
-    <Layout {...props} style={props.vertical ? { justifyContent: 'center' } : { alignItems: 'center' }} />
+    <Layout {...props} style={[props.vertical ? { justifyContent: 'center' } : { alignItems: 'center' }, props.style]} />
 
-VCenterLayout.propsTypes = {
-    ...Layout.propsTypes
+VCenterLayout.propTypes = {
+    ...Layout.propTypes
 }
 
 export default VCenterLayout;
