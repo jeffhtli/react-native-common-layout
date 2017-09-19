@@ -1,12 +1,10 @@
 import React from 'react';
-// import Layout from './src/Layout';
-// import VLayout from './src/VLayout';
-// import HLayout from './src/HLayout';
-// import HCenterLayout from './src/HCenterLayout';
-// import VCenterLayout from './src/VCenterLayout';
-// import CenterLayout from './src/CenterLayout';
-// import {fillCol} from './src/styles';
-import { StyleSheet, Text, View,ScrollView } from 'react-native';
+import { 
+  StyleSheet, 
+  Text, 
+  View,
+  ScrollView 
+} from 'react-native';
 
 import {
   Layout, 
@@ -16,12 +14,12 @@ import {
   VCenterLayout,
   CenterLayout,
   fillCol
-} from "./src";
+} from "react-native-common-layout";
 
 export default class App extends React.Component {
   render() {
     return (
-      <ScrollView style={{marginTop: 20}}>
+      <ScrollView style={{marginTop: 15}}>
         <VLayout style={styles.greyContainer}>
           <GreenBox />
           <GreenBox />

@@ -4,80 +4,59 @@ Shortcuts for React Native View and some styles
 
 Example
 ================
-```js
-<View style={{flexDirection: 'row'}}>
-  {/* view children*/}
-</View>
 
-<Layout>
-  {/* view children*/}
-</Layout>
-```
+![Snapshot](./snapshot.png)
 
 ```js
-<View style={{flexDirection: 'column', flex: 1}}>
-  {/* view children*/}
-</View>
+    <ScrollView style={{marginTop: 20}}>
+        <VLayout style={styles.greyContainer}>
+          <GreenBox />
+          <GreenBox />
+          <GreenBox />
+        </VLayout>
 
-<Layout vertical fill>
-  {/* view children*/}
-</Layout>
-```
+        <HLayout style={styles.greyContainer}>
+          <GreenBox />
+          <GreenBox />
+          <GreenBox />
+        </HLayout>
 
+        <HCenterLayout style={styles.greyContainer}>
+          <GreenBox />
+          <GreenBox />
+          <GreenBox />
+        </HCenterLayout>
 
-```js
-<View style={styles.container}>
-  {/* view children*/}
-</View>
-
-const styles = StyleSheet.crate({
-    container: {
-        flex: 1,
-        flexDirection: 'row',
-        justifyContent: 'center',
-        alignItems: 'center',
-    }
-})
-
-
-
-import {fillCenter} from 'react-native-layout';
-<Layout style={fillCenter}>
-  {/* view children*/}
-</Layout>
-```
-
-```js
-<View style={styles.rounded}>
-  {/* view children*/}
-</View>
-
-const styles = StyleSheet.crate({
-    rounded: {
-        borderRadius: 5,
-        borderColor: '#ccc',
-        borderWidth: 1
-    }
-})
+        <HCenterLayout vertical style={styles.greyContainer}>
+          <GreenBox />
+          <GreenBox />
+          <GreenBox />
+        </HCenterLayout>
 
 
+        <VCenterLayout style={styles.greyContainer}>
+          <GreenBox />
+          <GreenBox />
+          <GreenBox />
+        </VCenterLayout>
 
-import {border} from 'react-native-layout';
-<Layout style={border(4, 'red', 1)}>
-  {/* view children*/}
-</Layout>
+        <VCenterLayout vertical style={styles.greyContainer}>
+          <GreenBox />
+          <GreenBox />
+          <GreenBox />
+        </VCenterLayout>
 
+        <CenterLayout style={styles.greyContainer}>
+          <GreenBox />
+          <GreenBox />
+          <GreenBox />
+        </CenterLayout>
 
-
-import {border} from 'react-native-layout';
-<Layout style={styles.rounded}>
-  {/* view children*/}
-</Layout>
-
-const styles = StyleSheet.crate({
-    rounded: {
-        ...border(4, 'red', 1)
-    }
-})
+        <CenterLayout vertical style={styles.greyContainer}>
+          <GreenBox />
+          <GreenBox />
+          <GreenBox />
+        </CenterLayout>
+      </ScrollView>    
 
 ```
