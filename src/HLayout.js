@@ -5,7 +5,7 @@ const HLayout = props =>
     <Layout {...props} />;
 
 HLayout.propTypes = {
-    fill: React.PropTy
+    fill: React.PropTypes.bool
 };
 
 export default HLayout;
