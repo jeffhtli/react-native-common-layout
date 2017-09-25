@@ -1,20 +1,22 @@
 import React from 'react';
-import { 
-  StyleSheet, 
-  Text, 
+import {
+  StyleSheet,
+  Text,
   View,
-  ScrollView 
+  ScrollView
 } from 'react-native';
 
 import {
-  Layout, 
-  HLayout, 
+  Layout,
+  HLayout,
   VLayout,
-  HCenterLayout,
-  VCenterLayout,
+  HCenterHLayout,
+  HCenterVLayout,
+  VCenterHLayout,
+  VCenterVLayout,
   CenterLayout,
   fillCol
-} from "react-native-common-layout";
+} from "./react-native-common-layout";
 
 export default class App extends React.Component {
   render() {
@@ -32,30 +34,29 @@ export default class App extends React.Component {
           <GreenBox />
         </HLayout>
 
-        <HCenterLayout style={styles.greyContainer}>
+        <HCenterHLayout style={styles.greyContainer}>
           <GreenBox />
           <GreenBox />
           <GreenBox />
-        </HCenterLayout>
+        </HCenterHLayout>
 
-        <HCenterLayout vertical style={styles.greyContainer}>
+        <HCenterVLayout style={styles.greyContainer}>
           <GreenBox />
           <GreenBox />
           <GreenBox />
-        </HCenterLayout>
+        </HCenterVLayout>
 
+        <VCenterHLayout style={styles.greyContainer}>
+          <GreenBox />
+          <GreenBox />
+          <GreenBox />
+        </VCenterHLayout>
 
-        <VCenterLayout style={styles.greyContainer}>
+        <VCenterVLayout style={styles.greyContainer}>
           <GreenBox />
           <GreenBox />
           <GreenBox />
-        </VCenterLayout>
-
-        <VCenterLayout vertical style={styles.greyContainer}>
-          <GreenBox />
-          <GreenBox />
-          <GreenBox />
-        </VCenterLayout>
+        </VCenterVLayout>
 
         <CenterLayout style={styles.greyContainer}>
           <GreenBox />
@@ -73,7 +74,7 @@ export default class App extends React.Component {
   }
 }
 
-const GreenBox = props => <View style={{ height: 20, width: 100, backgroundColor: 'green', margin: 2 }} />
+const GreenBox = props => <View style={{ height: 20, width: 100, backgroundColor: 'green', margin: 2 }} />;
 
 const styles = StyleSheet.create({
   container: {
@@ -83,9 +84,9 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 
-  greyContainer: { 
-    backgroundColor: 'grey', 
-    marginTop: 10,  
+  greyContainer: {
+    backgroundColor: 'grey',
+    marginTop: 10,
     height: 80
   }
 });
