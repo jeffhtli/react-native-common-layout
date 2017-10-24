@@ -20,11 +20,9 @@ export default class Layout extends Component {
   render() {
     const {vertical, fill, style, children} = this.props;
 
-    return <View style={[
+    return <View {...this.props} style={[
       vertical ? col : row,
       fill ? fillStyle : null,
-      style]}>
-      {children}
-    </View>
+      style]} />
   }
 }

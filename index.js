@@ -6,6 +6,6 @@ export {default as VCenterLayout} from './src/VCenterLayout';
 export {default as HCenterLayout}  from './src/HCenterLayout';
 export {default as VCenterVLayout} from './src/VCenterVLayout';
 export {default as HCenterVLayout}  from './src/HCenterVLayout';
-export {default as VCenterHLayout} from './src/VCenterHLayout';
-export {default as HCenterHLayout}  from './src/HCenterHLayout';
+export {default as VCenterHLayout} from './src/VCenterLayout';
+export {default as HCenterHLayout}  from './src/HCenterLayout';
 export * from './src/styles';
