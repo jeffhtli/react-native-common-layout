@@ -1,1 +1,1 @@
-export default from './HCenterLayout';
+export {default as HCenterHLayout} from './HCenterLayout';

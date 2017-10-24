@@ -1,1 +1,1 @@
-export default from './VCenterLayout';
+export {default as VCenterHLayout} from './VCenterLayout';
