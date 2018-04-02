@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import {
   View,
   StyleSheet
@@ -8,8 +9,8 @@ import {row, col, fill as fillStyle} from './styles';
 export default class Layout extends Component {
 
   static propTypes = {
-    vertical: React.PropTypes.bool,
-    fill: React.PropTypes.bool
+    vertical: PropTypes.bool,
+    fill: PropTypes.bool
   };
 
   static defaultProps = {

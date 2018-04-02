@@ -3,3 +3,4 @@ npm-debug.log
 node_modules
 demo/react-native-common-layout
 jsconfig.json
+package-lock.json
